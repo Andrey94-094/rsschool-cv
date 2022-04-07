@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shelter</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header__wrap">
+    <div class="screen__wrap">
+      <header class="header header-pets">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img logo__img-pets" src="../../assets/icons/logo-black.svg"
+            alt="Cozy House, Shelter for pets in Boston" width="184" height="60">
+        </a>
+        <ul class="nav ">
+          <li class="nav__item"><a href="../main/index.html" class="nav__link nav__link--pets">About the shelter</a></li>
+          <li class="nav__item"><a href="#ourpets" class="nav__link nav__link--pets nav__link--active">Our pets </a></li>
+          <li class="nav__item"><a href="../main/index.html#help" class="nav__link nav__link--pets">Help the shelter</a></li>
+          <li class="nav__item"><a href="../main/index.html#contacts" class="nav__link nav__link--pets">Contacts </a></li>
+        </ul>
+
+      </header>
+    </div>
+  </div>
+
+  <main class="main-pets">
+    <section class="friends">
+      <h1 class="visually-hidden">Cozy House</h1>
+      <h2 class="friends_title">Our friends who<br>
+        are looking for a house</h2>
+      <ul class="friends__list slider">
+
+      </ul>
+
+      <div class="friends__btn-wrap">
+        <button class="friends__slide-btn friends__slide-btn--first" disabled aria-label="первый" >
+          <svg class="friends__arrow friends__arrow--friends" transform="rotate(180)" width="25" height="11"
+            viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z"
+              fill="#292929" />
+          </svg></button>
+        <button class="friends__slide-btn friends__slide-btn--previous" disabled aria-label="предыдущий" >
+          <svg class="friends__arrow friends__arrow--friends" transform="rotate(180)" width="10" height="11"
+            viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z"
+              fill="#292929" />
+          </svg>
+        </button>
+        <span class="pets__page">1</span>
+        <button class="friends__slide-btn friends__slide-btn--next" aria-label="следующий">
+          <svg class="friends__arrow friends__arrow--friends" width="10" height="11" viewBox="0 0 10 11" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z"
+              fill="#292929" />
+          </svg>
+        </button>
+        <button class="friends__slide-btn friends__slide-btn--last" aria-label="последний">
+          <svg class="friends__arrow" width="25" height="11" viewBox="0 0 25 11" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z"
+              fill="#292929" />
+          </svg>
+
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a name="contacts"></a>
+    <div class="screen__wrap">
+      <div class="footer__wrap">
+        <div class="footer__contacts">
+          <h3 class="footer__title">For questions and suggestions</h3>
+          <a class="footer__email footer__text" href="mailto:email@shelter.com">email@shelter.com</a>
+          <a class="footer__phone footer__text" href="tel:+13 674 567 75 54">+13 674 567 75 54</a>
+        </div>
+        <div class="footer__location">
+          <h3 class="footer__title footer__title-location">We are waiting for your visit</h3>
+          <a class="footer__address footer__text" target="_blank" href="https://goo.gl/maps/KGeA33zHNnKaiJqWA">1 Central
+            Street, Boston (entrance from the store)</a>
+          <a class="footer__address footer__text" target="_blank" href="https://goo.gl/maps/yWAZfNBDD4EUCJwz5">18 South
+            Park, London </a>
+
+        </div>
+        <img class="footer__img" src="../../assets/images/footer-puppy.png" alt="" width="300" height="310">
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+</html>
