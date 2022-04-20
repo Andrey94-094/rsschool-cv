@@ -419,7 +419,6 @@ a {
   margin: 0;
   margin-bottom: 5.9%;
   text-align: center;
-  -ms-grid-column: 2;
   grid-column-start: 2;
   grid-column-end: 3;
   padding-left: 2px;
@@ -447,7 +446,6 @@ a {
 }
 
 .pets__slider {
-  -ms-grid-column: 2;
   grid-column-start: 2;
   grid-column-end: 3;
   overflow: hidden;
@@ -560,7 +558,6 @@ a {
 }
 
 .pets__slide-btn--previous {
-  -ms-grid-column: 1;
   grid-column-start: 1;
   grid-column-end: 2;
   -ms-flex-item-align: center;
@@ -583,7 +580,6 @@ a {
 }
 
 .pets__slide-btn--next {
-  -ms-grid-column: 3;
   grid-column-start: 3;
   grid-column-end: 4;
   -ms-grid-column-align: end;
@@ -606,7 +602,6 @@ a {
 }
 
 .pets__button {
-  -ms-grid-column: 2;
   grid-column-start: 2;
   grid-column-end: 3;
   -webkit-box-sizing: border-box;
@@ -1610,7 +1605,6 @@ a {
 }
 
 .friends__slide-btn--previous {
-  -ms-grid-column: 1;
   grid-column-start: 1;
   grid-column-end: 2;
   -ms-flex-item-align: center;
@@ -1627,7 +1621,6 @@ a {
 }
 
 .friends__slide-btn--next {
-  -ms-grid-column: 3;
   grid-column-start: 3;
   grid-column-end: 4;
   -ms-grid-column-align: end;
@@ -1700,7 +1693,6 @@ a {
 .burger__link:hover {
   cursor: pointer;
   text-decoration: none;
-
 }
 
 .burger__link:active,

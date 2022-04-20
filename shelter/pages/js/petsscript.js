@@ -10,7 +10,6 @@ let vh = window.innerHeight * 0.01
 
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
 const openBurger = () => {
   if (isAnimathionStop === true) {
     isAnimathionStop = false
@@ -28,7 +27,6 @@ const openBurger = () => {
       isBurgerOpen = true
     })
   }
-
 }
 
 const closeBurger = () => {
@@ -74,7 +72,7 @@ burgerLinks.forEach(item => {
     evt.preventDefault
     if (isBurgerOpen) {
       closeBurger()
-     }
+    }
   })
 })
 
@@ -85,12 +83,11 @@ window.addEventListener('resize', () => {
   }
 })
 
-
-fetch('./js/pets.json').then(res => res.json()).then(json => {
+fetch('../js/pets.json').then(res => res.json()).then(json => {
   const petCardTemplate = document.querySelector('#petCard').content
-  const freindsList = document.querySelector('.friends__list')  
+  const freindsList = document.querySelector('.friends__list')
   const arrpets = []
-  const PETS_COUNT = 48
+  const PETS_COUNT = 16
   let pageSize
   let pageNumber = 1
   let lastPage
@@ -142,7 +139,7 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
     sliderItem[sliderItem.length - 1].setAttribute('id', `${json[itemNumber].id}`)
     sliderName[sliderItem.length - 1].textContent = `${json[itemNumber].name}`
     sliderImg[sliderItem.length - 1].setAttribute('src', `${json[itemNumber].img}`)
-    
+
   }
 
 
@@ -170,9 +167,9 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
     const popup = document.querySelector('.popup')
     const popupCloseBtn = popup.querySelector('.popup__close-btn')
 
-    friendsList.addEventListener('click',(evt)=>{
+    friendsList.addEventListener('click', (evt) => {
       evt.preventDefault()
-      if(evt.target.parentNode.classList.contains('slider__item')){
+      if (evt.target.parentNode.classList.contains('slider__item')) {
         darkScreen.style.display = 'block'
         const petId = evt.target.parentNode.getAttribute('id')
         const pet = json.find(el => el.id === petId)
@@ -193,8 +190,8 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
         evt.preventDefault()
         darkScreen.style.display = 'none'
         popup.classList.remove('popup--active')
-        document.body.style.overflowY = 'visible'   
-        document.querySelector('.header-pets').style.zIndex = '3'     
+        document.body.style.overflowY = 'visible'
+        document.querySelector('.header-pets').style.zIndex = '3'
       }
 
       popupCloseBtn.addEventListener('click', popupClose)
@@ -205,16 +202,16 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
         }
       })
 
-      document.querySelector('.dark-screen').addEventListener('click',popupClose)
+      document.querySelector('.dark-screen').addEventListener('click', popupClose)
 
     })
 
-    popup.addEventListener('mouseleave',()=>{
-      popupCloseBtn.style.backgroundColor ='#FDDCC4'
+    popup.addEventListener('mouseleave', () => {
+      popupCloseBtn.style.backgroundColor = '#FDDCC4'
     })
 
-    popup.addEventListener('mouseenter',(e)=>{
-      popupCloseBtn.style.backgroundColor =null
+    popup.addEventListener('mouseenter', (e) => {
+      popupCloseBtn.style.backgroundColor = null
     })
   }
 
@@ -241,10 +238,6 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
   const previousBtn = document.querySelector('.friends__slide-btn--previous')
   const firstBtn = document.querySelector('.friends__slide-btn--first')
   const pageSpan = document.querySelector('.pets__page')
-
-
-
-
 
   nextBtn.addEventListener('click', () => {
     pageNumber++
@@ -294,24 +287,4 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
     lastBtn.removeAttribute('disabled')
     nextBtn.removeAttribute('disabled')
   })
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // самый-самый конец
 })
