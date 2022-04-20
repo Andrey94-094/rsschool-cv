@@ -17,7 +17,7 @@
     <div class="screen__wrap start__hidden">
       <header class="header">
 
-        <a class="header__. logo" href="#">
+        <a class="header__logo logo" href="#">
           <img class="logo__img" src="../../assets/icons/logo.svg" alt="Cozy House, Shelter for pets in Boston"
             width="184" height="60">
         </a>
@@ -27,6 +27,10 @@
           <li class="nav__item"><a href="#help" class="nav__link">Help the shelter</a></li>
           <li class="nav__item"><a href="#contacts" class="nav__link">Contacts </a></li>
         </ul>
+
+        <button class="header__burger header__burger--hidden header__burger--close" aria-label="меню открыть-закрыть">
+          <span class="header__burger-line"></span>
+        </button>
 
       </header>
       <div class="start__wrap">
@@ -38,6 +42,21 @@
 
         </div>
         <img class="start__img" src="../../assets/images/start-screen-puppy.png" alt="милый щеночек">
+      </div>
+
+      <div class="burger">
+
+        <a class="burger__logo logo" href="#">
+          <img class="logo__img" src="../../assets/icons/logo.svg" alt="Cozy House, Shelter for pets in Boston"
+            width="184" height="60">
+        </a>
+        <ul class="burger__nav">
+          <li class="burger__item"><a href="#about" class="burger__link burger__link--active">About the shelter</a></li>
+          <li class="burger__item"><a href="../pets/index.html" class="burger__link">Our pets </a></li>
+          <li class="burger__item"><a href="#help" class="burger__link">Help the shelter</a></li>
+          <li class="burger__item"><a href="#contacts" class="burger__link">Contacts </a></li>
+        </ul>
+
       </div>
 
 
@@ -70,25 +89,6 @@
             </svg>
           </button>
           <div class="pets__slider slider">
-            <ul class="slider__list" style="z-index: 0;">
-              <li class="slider__item" id="pet_20">
-                <img class="slider__img" src="../../assets/images/pets-katrine.jpg" alt="" width="270" height="270">
-                <p class="slider__name">Katrine </p>
-                <a class="slider__btn" href="">Learn more</a>
-              </li>
-
-              <li class="slider__item" id="pet_1">
-                <img class="slider__img" src="../../assets/images/pets-jennifer.jpg" alt="" width="270" height="270">
-                <p class="slider__name">Jennifer </p>
-                <a class="slider__btn" href="">Learn more</a>
-              </li>
-
-              <li class="slider__item" id="pet_8">
-                <img class="slider__img" src="../../assets/images/pets-woody.jpg" alt="" width="270" height="270">
-                <p class="slider__name">Woody </p>
-                <a class="slider__btn" href="">Learn more</a>
-              </li>
-            </ul>
           </div>
           <button class="pets__slide-btn pets__slide-btn--next" aria-label="следующий">
             <svg class="pets__arrow" width="14" height="6" viewBox="0 0 14 6" fill="none" transform="rotate(180)"
@@ -155,7 +155,7 @@
         <div class="donation__content">
           <h3 class="donation__title">You can also<br> make a&nbsp;donation</h3>
           <p class="donation__bank"> Name of the bank / Type of bank account</p>
-          <a class="donation__acount" href="#">8380 2880 8028 8791 7435</a>
+          <a class="donation__acount" href="">8380 2880 8028 8791 7435</a>
           <p class="donation__text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate.
             Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
@@ -188,7 +188,35 @@
     </div>
 
   </footer>
-  <script src="js/script.js"></script>
+
+  <template id="petCard">
+    <li class="slider__item">
+      <img class="slider__img" src="../../assets/images/pets-katrine.jpg" alt="" width="270" height="270">
+      <p class="slider__name">Katrine</p>
+      <a class="slider__btn" href="">Learn more</a>
+    </li>
+  </template>
+  <section class="popup">
+    <img class="popup__img" src="" alt="порода" width="500" height="500">
+    <div class="popup__content">
+      <h3 class="popup__name"></h3>
+      <p class="popup__type-breed"></p>
+      <p class="popup__text"></p>
+      <ul class="popup__list">
+        <li class="popup__item">Age: <span class="popup__age"></span></li>
+        <li class="popup__item">Inoculations: <span class="popup__inoculations"></span></li>
+        <li class="popup__item">Diseases: <span class="popup__diseases"></span> </li>
+        <li class="popup__item">Parasites: <span class="popup__parasites"></span> </li>
+
+      </ul>
+
+      <button class="popup__close-btn" type="button"><span class="visually-hidden">close</span></button>
+    </div>
+  </section>
+
+  <div class="dark-screen"></div>
+  <script src="../js/pets.json"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 
