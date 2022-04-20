@@ -31,16 +31,16 @@ const openBurger = () => {
 }
 
 const closeBurger = () => {
-    darkScreen.style.display = 'none'
-    burgerBtn.classList.remove("header__burger--open")
-    burgerBtn.classList.add("header__burger--close")
-    burgerMenu.classList.remove('burger__animation-in')
-    burgerMenu.classList.add('burger__animation-out')
-    burgerLogo.classList.remove('burger__logo--open')
-    headerLogo.classList.remove('header__logo--hide')
-    document.body.style.overflowY = 'visible'
-    setTimeout(removeClassActive, 1500)
-    isBurgerOpen = false 
+  darkScreen.style.display = 'none'
+  burgerBtn.classList.remove("header__burger--open")
+  burgerBtn.classList.add("header__burger--close")
+  burgerMenu.classList.remove('burger__animation-in')
+  burgerMenu.classList.add('burger__animation-out')
+  burgerLogo.classList.remove('burger__logo--open')
+  headerLogo.classList.remove('header__logo--hide')
+  document.body.style.overflowY = 'visible'
+  setTimeout(removeClassActive, 1500)
+  isBurgerOpen = false
 }
 
 const removeClassActive = () => {
@@ -50,7 +50,7 @@ const removeClassActive = () => {
 burgerBtn.addEventListener('click', (e) => {
   e.stopPropagation();
   if (isBurgerOpen) {
-    closeBurger()    
+    closeBurger()
   } else {
     openBurger()
   }
@@ -62,7 +62,7 @@ window.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
     evt.preventDefault
     if (isBurgerOpen) {
-      closeBurger()      
+      closeBurger()
     }
   }
 })
@@ -71,19 +71,19 @@ burgerLinks.forEach(item => {
   item.addEventListener('click', (evt) => {
     evt.preventDefault
     if (isBurgerOpen) {
-      closeBurger()  
+      closeBurger()
     }
   })
 })
 
 window.addEventListener('resize', () => {
   if (isBurgerOpen) {
-    closeBurger() 
+    closeBurger()
   }
 })
 
 
-fetch('./js/pets.json').then(res => res.json()).then(json => {
+fetch('../js/pets.json').then(res => res.json()).then(json => {
   const petCardTemplate = document.querySelector('#petCard').content
   let pageSize
   let isEnable = true
@@ -145,14 +145,14 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
     document.querySelector('.dark-screen').addEventListener('click', popupClose)
 
 
-    popup.addEventListener('mouseleave',()=>{
+    popup.addEventListener('mouseleave', () => {
       console.log('ушел на базу')
-      popupCloseBtn.style.backgroundColor ='#FDDCC4'
+      popupCloseBtn.style.backgroundColor = '#FDDCC4'
     })
 
-    popup.addEventListener('mouseenter',(e)=>{
+    popup.addEventListener('mouseenter', (e) => {
       console.log(e.target)
-      popupCloseBtn.style.backgroundColor =null
+      popupCloseBtn.style.backgroundColor = null
 
     })
   })
@@ -323,9 +323,4 @@ fetch('./js/pets.json').then(res => res.json()).then(json => {
       })
     }
   })
-
-
-
-
-
 })
